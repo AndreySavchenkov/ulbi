@@ -21,7 +21,7 @@ return {
   module: {
     rules: buildLoaders(options),
   },
-  resolve: buildResolvers(),
+  resolve: buildResolvers(options),
   devtool: isDev ?  'inline-source-map' : undefined,
   devServer: isDev ? buildDevServer(options) : undefined,
 }
