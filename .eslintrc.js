@@ -5,7 +5,8 @@ module.exports = {
     },
     "extends": [
         "plugin:react/recommended",
-        "standard-with-typescript"
+        "standard-with-typescript",
+        "plugin:i18next/recommended"
     ],
     "overrides": [
     ],
@@ -14,7 +15,9 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "@typescript-eslint",
+        "i18next"
     ],
     "parserOptions": {
         "project": "./tsconfig.json"
@@ -29,5 +32,6 @@ module.exports = {
         "react/no-deprecated": "off",
         "@typescript-eslint/naming-convention": "off",
         "@typescript-eslint/ban-ts-comment":"off",
+        "i18next/no-literal-string: ['error', {markupOnly: true}]"
     }
 }
